@@ -23,4 +23,20 @@ public class TipCalculator {
     public double tipAmount() {
         return (totalBillBeforeTip*tipPercentage);
     }
+
+    public double getTipPercentage() {
+        return tipPercentage *100;
+    }
+
+    public double perPersonCostBeforeTip() {
+        return totalBillBeforeTip / numPeople;
+    }
+
+    public double perPersonTipAmount() {
+        return tipAmount() / numPeople;
+    }
+
+    public double perPersonTotalCost() {
+        return perPersonCostBeforeTip() + perPersonTipAmount();
+    }
 }

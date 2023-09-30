@@ -31,12 +31,12 @@ public class TipCalculatorRunner {
         System.out.println();
         System.out.println("----------------");
         System.out.println("Total bill before tip: " + info.getTotalBillBeforeTip());
-        System.out.println("Tip Percentage: " + tip + "%");
+        System.out.println("Tip Percentage: " + info.getTipPercentage() + "%");
         System.out.println("Total tip: " + String.format("%.2f", info.tipAmount()));
-        System.out.println("Total bill with tip: " + info.totalBill());
+        System.out.println("Total bill with tip: " + String.format("%.2f", info.totalBill()));
+        System.out.println("Per person cost before tip: " + String.format("%.2f", info.perPersonCostBeforeTip()));
+        System.out.println("Tip per person: " + String.format("%.2f", info.perPersonTipAmount()));
+        System.out.println("Total Cost Per Person: " + String.format("%.2f", info.perPersonTotalCost()));
 
-
-        //TEST CODES
-        System.out.println("Total bill before tip: " + info.getTotalBillBeforeTip());
     }
 }
